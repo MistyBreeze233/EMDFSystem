@@ -1,0 +1,74 @@
+-- 删除表
+DROP TABLE IF EXISTS `PredictionCurve`;
+DROP TABLE IF EXISTS `IndustryFinancial`;
+DROP TABLE IF EXISTS `Order`;
+DROP TABLE IF EXISTS `Employee`;
+DROP TABLE IF EXISTS `MonthlyFinancialReport`;
+DROP TABLE IF EXISTS `Company`;
+
+
+
+
+-- 公司信息表
+CREATE TABLE Company (
+    CompanyID INTEGER PRIMARY KEY,
+    CompanyName TEXT,
+    CompanyAddress TEXT,
+    Industry TEXT,
+    CompanySize TEXT
+);
+
+-- 月度财报信息表
+CREATE TABLE MonthlyFinancialReport (
+    ReportID INTEGER PRIMARY KEY,
+    CompanyID INTEGER,
+    Year INTEGER,
+    Month INTEGER,
+    Revenue REAL,
+    Profit REAL,
+    FOREIGN KEY (CompanyID) REFERENCES Company(CompanyID)
+);
+
+-- 人员信息表
+CREATE TABLE Employee (
+    EmployeeID INTEGER PRIMARY KEY,
+    CompanyID INTEGER,
+    Name TEXT,
+    Position TEXT,
+    StartDate DATE,
+    EndDate DATE,
+    FOREIGN KEY (CompanyID) REFERENCES Company(CompanyID)
+);
+
+
+
+
+-- 订单信息表
+CREATE TABLE `Order` (
+    OrderID INTEGER PRIMARY KEY,
+    CompanyID INTEGER,
+    OrderDate DATE,
+    Amount REAL,
+    FOREIGN KEY (CompanyID) REFERENCES Company(CompanyID)
+);
+
+
+-- 行业财务信息表
+CREATE TABLE IndustryFinancial (
+    ID INTEGER PRIMARY KEY,
+    Industry TEXT,
+    Year INTEGER,
+    Month INTEGER,
+    IndustryRevenue REAL,
+    IndustryProfit REAL
+);
+
+-- 预测曲线数据表
+CREATE TABLE PredictionCurve (
+    ID INTEGER PRIMARY KEY,
+    CompanyID INTEGER,
+    Year INTEGER,
+    Month INTEGER,
+    PredictedManpowerDemand INTEGER,
+    FOREIGN KEY (CompanyID) REFERENCES Company(CompanyID)
+);

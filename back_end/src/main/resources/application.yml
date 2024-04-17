@@ -1,0 +1,33 @@
+local:
+  server:
+    port: 8080
+
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5000MB
+      max-request-size: 5000MB
+  mvc:
+    #用于swagger2配置
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  #数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/personnel_requirements
+    username: root
+    password: "012402"
+    #url: jdbc:mysql://localhost:3306/network_course
+    #username: root
+    #password: 123456
+    #hikari连接池，也可用druid
+    hikari:
+      pool-name:  HikariCP
+
+mybatis-plus:
+  #Mapper.xml位置
+  mapper-locations: classpath*:/mapper/*Mapper.xml
