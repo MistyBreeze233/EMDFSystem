@@ -1,0 +1,17 @@
+Index: src/views/test3/index.vue
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/views/test3/index.vue b/src/views/test3/index.vue
+--- a/src/views/test3/index.vue	
++++ b/src/views/test3/index.vue	(date 1666896639576)
+@@ -309,7 +309,7 @@
+           {
+             if(item.p_m_relations.length!=0)
+             {
+-              let tar=item.p_m_relations[0].measureEntity.id; 
++              let tar=item.p_m_relations[0].measureEntity.id;
+               let finIndex=0;
+               let index=0;
+ 
