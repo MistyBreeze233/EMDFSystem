@@ -18,8 +18,8 @@ The Enterprise Manpower Demand Forecasting System is a software application desi
 - **Integration:** Seamlessly integrate with existing HR systems and databases for data synchronization and collaboration.
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/your-repo.git`
-2. Navigate to the project directory: `cd enterprise-manpower-forecast`
+1. Clone the repository: `git clone https://github.com//MistyBreeze233/EMDFSystem.git`
+2. Navigate to the project directory: `cd EMDFSystem`
 3. Install dependencies: `npm install`
 4. Start the application: `npm start`
 
