@@ -4,12 +4,6 @@
 ## Overview
 The Enterprise Manpower Demand Forecasting System is a software application designed to predict and analyze the human resource needs of an organization. By utilizing advanced algorithms and data analysis techniques, the system assists businesses in planning and managing their workforce more effectively.
 
-## Contributors
-- Chen Huifeng
-- Zhang Ju
-- Li Kun
-- Guo Xiao
-
 ## Features
 - **Forecasting:** Predict future manpower requirements based on historical data, industry trends, and other relevant factors.
 - **Analysis:** Analyze workforce trends, patterns, and potential areas for optimization.
